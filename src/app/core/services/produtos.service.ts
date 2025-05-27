@@ -23,14 +23,13 @@ export class ProdutosService {
   excluir(id: number): Observable<Produto> {
     return this.http.delete<Produto>(this.API + `/${id}`);
   }
-
-  editar(Produto: Produto): Observable<Produto> {
-    const url = `${this.API}/${Produto.id}`
-    return this.http.put<Produto>(url, Produto)
-  }
-
-  buscarPorId(id: number): Observable<Produto | undefined> {
-    return this.http.get<Produto>(this.API + `/${id}`);
-  }
-
+//Faz um PUT para alterar um Produto no banco de dados.
+editar(Produto: Produto): Observable<Produto> {
+const url = `${this.API}/${Produto.id}`
+return this.http.put<Produto>(url, Produto)
+}
+//Faz um GET para pegar o Produto de ID informado.
+buscarPorId(id: number): Observable<Produto | undefined> {
+return this.http.get<Produto>(this.API + `/${id}`);
+}
 }

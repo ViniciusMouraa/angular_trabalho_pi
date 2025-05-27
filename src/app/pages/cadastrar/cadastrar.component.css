@@ -2,56 +2,68 @@
 form {
   max-width: 500px;
   margin: 40px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px 28px;
+  background-color: #ffffff; /* fundo branco puro para contraste */
+  border: 1.5px solid #d1d5db; /* cinza suave */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(31, 42, 64, 0.08); /* sombra suave azul escura */
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 8px 26px rgba(26, 188, 156, 0.18); /* sombra verde-água leve no hover */
 }
 
 /* Estilo dos rótulos */
 form label {
   display: block;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #333;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1f2a40; /* azul escuro */
+  font-size: 15px;
 }
 
 /* Estilo dos inputs */
 .input-simples {
   width: 100%;
-  padding: 10px 12px;
+  padding: 14px 16px;
   font-size: 16px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  margin-bottom: 12px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
   box-sizing: border-box;
-  transition: border-color 0.3s;
+  background-color: #f9fafb;
+  color: #2c3e50;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Efeito ao focar no input */
 .input-simples:focus {
-  border-color: #007bff;
+  border-color: #1abc9c; /* verde-água */
+  background-color: #ffffff;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.25);
 }
 
 /* Estilo do botão de submit */
 .input-submeter {
   width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  background-color: #28a745; /* verde sucesso */
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 14px;
+  margin-top: 24px;
+  background: linear-gradient(90deg, #3a7bd5 0%, #2e5ca3 100%);
+  color: #f4f6f8;
+  font-size: 17px;
+  font-weight: 700;
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  box-shadow: 0 4px 14px rgba(46, 92, 163, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
 .input-submeter:hover {
-  background-color: #218838;
+  background: linear-gradient(90deg, #2e5ca3 0%, #1f2a40 100%);
+  box-shadow: 0 6px 18px rgba(31, 42, 64, 0.6);
 }

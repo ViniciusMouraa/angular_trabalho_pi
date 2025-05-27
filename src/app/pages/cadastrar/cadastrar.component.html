@@ -13,25 +13,25 @@
     class="input-simples"
     id="input-nome"
     name="input-nome"
-    placeholder="Digite o primeiro nome"
+    placeholder="Digite o nome do Produto"
     type="text"
     [(ngModel)]="Produto.nome"
   />
-  <label for="input-sobrenome">E-mail</label><br />
+  <label for="input-sobrenome">Descrição</label><br />
   <input
     class="input-simples"
     id="input-desc"
     name="input-desc"
-    placeholder="desc"
+    placeholder="Descrição"
     type="text"
     [(ngModel)]="Produto.desc"
   />
-  <label for="input-preco">preco</label><br />
+  <label for="input-preco">Preço</label><br />
   <input
     class="input-simples"
     id="input-preco"
     name="input-preco"
-    type="tel"
+    type="text"
     [(ngModel)]="Produto.preco"
   />
   <button class="input-submeter" (click)="submeter()">Cadastrar</button>

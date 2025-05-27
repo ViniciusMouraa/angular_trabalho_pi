@@ -1,0 +1,69 @@
+body {
+  background-color: #f4f6f8; /* fundo suave da paleta */
+  font-family: 'Poppins', sans-serif; /* fonte moderna e uniforme */
+  color: #2c3e50; /* texto primário cinza escuro */
+  margin: 0;
+  padding: 0;
+}
+
+.produto-form {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #ffffff; /* branco puro para contraste */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(31, 42, 64, 0.1); /* sombra com cor do azul escuro */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.produto-form:hover {
+  box-shadow: 0 8px 24px rgba(26, 188, 156, 0.2); /* sombra verde-água leve no hover */
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f2a40; /* azul escuro para destaque do label */
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1.5px solid #d1d5db; /* cinza suave */
+  border-radius: 8px;
+  background-color: #f9fafb;
+  color: #2c3e50; /* texto do input */
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #1abc9c; /* verde-água da paleta */
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.25);
+}
+
+.btn-salvar {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #3a7bd5 0%, #2e5ca3 100%);
+  border: none;
+  border-radius: 8px;
+  color: #f4f6f8; /* texto claro */
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(46, 92, 163, 0.4);
+}
+
+.btn-salvar:hover {
+  background: linear-gradient(90deg, #2e5ca3 0%, #1f2a40 100%);
+  box-shadow: 0 6px 16px rgba(31, 42, 64, 0.6);
+}

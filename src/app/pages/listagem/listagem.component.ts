@@ -1,21 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TrackByFunction } from '@angular/core';
 import { Produto } from '../../core/types/types';
 import { ProdutosService } from '../../core/services/produtos.service';
-import { Router } from '@angular/router';
-
+import { Router,RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common'; // boa prática em Standalone para *ngIf, *ngFor etc.
 @Component({
   selector: 'app-listagem',
-  imports: [],
+  imports: [CommonModule, RouterModule],
   templateUrl: './listagem.component.html',
   styleUrl: './listagem.component.css'
 })
 export class ListagemComponent implements OnInit{
 listaProdutos: Produto[] = [];
+trackById: TrackByFunction<Produto> | undefined;
 constructor(
 private service: ProdutosService,
 private router: Router
 ) { }
+
 ngOnInit(): void {
+this.carregarProdutos();
+}
+carregarProdutos(): void {
 this.service.listar().subscribe((Produtos) => {
 this.listaProdutos = Produtos;
 });

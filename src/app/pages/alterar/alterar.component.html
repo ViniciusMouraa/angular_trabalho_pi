@@ -1,1 +1,36 @@
-<p>alterar works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="produto-form">
+  <div class="form-group">
+    <label for="nome">Nome:</label>
+    <input
+      id="nome"
+      type="text"
+      formControlName="Nome"
+      class="form-control"
+      placeholder="Digite o nome"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="desc">Descrição do Produto:</label>
+    <input
+      id="desc"
+      type="text"
+      formControlName="Desc"
+      class="form-control"
+      placeholder="Digite a descrição"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="preco">Preço do Produto:</label>
+    <input
+      id="preco"
+      type="text"
+      formControlName="Preço"
+      class="form-control"
+      placeholder="Digite o preço"
+    />
+  </div>
+
+  <button type="submit" class="btn-salvar">Salvar</button>
+</form>

@@ -1,88 +1,73 @@
-/* Container principal */
 .content-container {
-max-width: 1000px;
-margin: 40px auto;
-padding: 20px;
-background-color: #f9f9f9;
-border: 1px solid #ddd;
-border-radius: 8px;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-overflow-x: auto; /* Permite rolar a tabela em telas pequenas */
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 28px 32px;
+  border: 1.5px solid #3a7bd5;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(31, 42, 64, 0.3);
+  font-family: 'Poppins', sans-serif;
+  color: #f4f6f8;
+  overflow-x: auto;
+  box-sizing: border-box;
+  z-index: 0;
 }
-/* Estilo geral da tabela */
+
+.content-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #1f2a40;
+  opacity: 0.8; /* aumentei aqui de 0.7 para 0.8 */
+  border-radius: 12px;
+  z-index: -1;
+}
+
+
+.titulo-lista {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1abc9c;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 table {
-width: 100%;
-border-collapse: collapse;
-margin-top: 20px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  margin-top: 24px;
 }
-/* Estilo dos cabeçalhos da tabela */
+
 thead tr {
-background-color: #007bff;
-color: white;
+  background-color: #1abc9c;
+  color: #1f2a40;
+  border-radius: 12px;
 }
+
 th, td {
-padding: 12px 16px;
-text-align: center; /* Centraliza tanto cabeçalho quanto células */
-vertical-align: middle; /* Alinha verticalmente ao centro */
+  padding: 14px 18px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
 }
-/* Estilo das linhas do corpo da tabela */
+
+thead tr th:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+thead tr th:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
 tbody tr {
-background-color: #ffffff;
-border-bottom: 1px solid #ccc;
-}
-tbody tr:hover {
-background-color: #f1f1f1; /* Destaque no hover */
-}
-/* Ajuste específico para a coluna de Ações */
-td:last-child {
-
-white-space: nowrap; /* Impede quebra de linha entre botões */
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 10px; /* Espaçamento entre os botões */
-}
-/* Estilo base dos botões */
-td button {
-min-width: 90px;
-padding: 8px 14px;
-font-size: 14px;
-font-weight: bold;
-border: none;
-border-radius: 6px;
-cursor: pointer;
-transition: background-color 0.3s, transform 0.2s;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-/* Botão Editar */
-.btn-editar {
-background-color: #17a2b8;
-color: white;
-}
-.btn-editar:hover {
-background-color: #138496;
-transform: translateY(-2px);
-}
-/* Botão Excluir */
-.btn-excluir {
-background-color: #e3342f;
-color: white;
-}
-.btn-excluir:hover {
-background-color: #c82333;
-transform: translateY(-2px);
-}
-/* Responsividade para telas menores */
-@media (max-width: 600px) {
-th, td {
-padding: 8px 10px;
-}
-td:last-child {
-
-flex-direction: column; /* Empilha os botões no mobile */
-gap: 6px;
-}
-td button {
-width: 100%;
-}
+  background-color: transparent; /* transparente para mostrar o fundo do container */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(31, 42, 64, 0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }

@@ -1,27 +1,13 @@
 import { Component } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Produto } from '../core/types/types';
-import { ProdutosService } from '../core/services/produtos.service';
-import { ActivatedRoute, Router } from '@angular/router';
-
+import { RouterModule } from '@angular/router';
 
 @Component({
+  standalone: true,
   selector: 'app-header',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-titulo = 'Cadastro de Produtos';
-Produto: Produto = {} as Produto;
-constructor(
-private service: ProdutosService,
-private router: Router
-) { }
-submeter() {
-this.service.incluir(this.Produto).subscribe(() => {
-this.router.navigate(['/listagem']);
-});
-}
 
 }

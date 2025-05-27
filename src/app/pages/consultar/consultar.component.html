@@ -1,1 +1,24 @@
-<p>consultar works!</p>
+<div class="consulta-container">
+<form (ngSubmit)="buscarProduto()">
+<label for="input-id">Informe o ID do Produto:</label>
+<input
+type="number"
+id="input-id"
+name="input-id"
+[(ngModel)]="idBusca"
+class="input-id"
+required
+/>
+<button type="submit" class="btn-buscar">Buscar</button>
+</form>
+<div *ngIf="ProdutoEncontrado" class="Produto-dados">
+<h2>Dados do Produto</h2>
+<p><strong>ID:</strong> {{ ProdutoEncontrado.id }}</p>
+<p><strong>Nome:</strong> {{ ProdutoEncontrado.nome }}</p>
+<p><strong>Descrição:</strong> {{ ProdutoEncontrado.desc }}</p>
+<p><strong>Preço:</strong> {{ ProdutoEncontrado.preco }}</p>
+</div>
+<div *ngIf="erroBusca" class="erro-busca">
+{{ erroBusca }}
+</div>
+</div>

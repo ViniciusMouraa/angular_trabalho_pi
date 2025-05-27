@@ -1,27 +1,27 @@
 <div class="content-container">
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th>Nome</th>
-<th>Desc</th>
-<th>Preco</th>
-<th>Ações</th>
-</tr>
-</thead>
-<tbody>
-@for (produto of listaProdutos; track produto){
-<tr>
-<td>{{ produto.id }}</td>
-<td>{{ produto.nome }}</td>
-<td>{{ produto.desc }}</td>
-<td>{{ produto.preco }}</td>
-<td>
-<button class="btn-editar">Editar</button>
-<button class="btn-excluir" (click)="excluir(produto.id!)">Excluir</button>
-</td>
-</tr>
-}
-</tbody>
-</table>
+  <h2 class="titulo-lista">Aqui estão todos os seus periféricos!</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Produto</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produto of listaProdutos">
+        <td>{{ produto.id }}</td>
+        <td>{{ produto.nome }}</td>
+        <td>{{ produto.desc }}</td>
+        <td>{{ produto.preco | currency:'BRL':'symbol':'1.2-2' }}</td>
+        <td>
+          <button class="btn-editar" [routerLink]="['/alterar', produto.id]">Editar</button>
+          <button class="btn-excluir" (click)="excluir(produto.id!)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

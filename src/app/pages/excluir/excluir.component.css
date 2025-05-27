@@ -1,0 +1,72 @@
+.excluir-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px 28px;
+  background-color: #fff5f5; /* tom suave de rosa claro */
+  border: 1.5px solid #f7c6c7; /* rosa claro delicado */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(199, 85, 85, 0.12); /* sombra rosa suave */
+  font-family: 'Poppins', sans-serif;
+  color: #5a2121;
+  transition: box-shadow 0.3s ease;
+}
+
+.excluir-container:hover {
+  box-shadow: 0 8px 26px rgba(220, 53, 69, 0.25); /* sombra vermelha leve no hover */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-id {
+  padding: 14px 16px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #5a2121;
+  background-color: #fff8f8;
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-id:focus {
+  border-color: #dc3545; /* vermelho */
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+}
+
+.btn-excluir {
+  padding: 14px;
+  background: linear-gradient(90deg, #dc3545 0%, #b02a37 100%);
+  color: #fff8f8;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(220, 53, 69, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-excluir:hover {
+  background: linear-gradient(90deg, #b02a37 0%, #7a1a22 100%);
+  box-shadow: 0 6px 18px rgba(176, 42, 55, 0.6);
+}
+
+.sucesso-mensagem {
+  margin-top: 20px;
+  color: #28a745; /* verde sucesso */
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.erro-mensagem {
+  margin-top: 20px;
+  color: #e74c3c; /* vermelho elegante */
+  font-weight: 700;
+  font-size: 15px;
+}
